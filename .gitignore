@@ -1,6 +1,45 @@
+# Dependências
 node_modules/
+
+# Expo
 .expo/
+.expo-shared/
 dist/
-android/
-ios/
+web-build/
+expo-env.d.ts
+
+# Pastas nativas geradas (o `expo prebuild` / `run:android` recria)
+/android
+/ios
+
+# Builds e binários
+*.apk
+*.aab
+*.ipa
+*.app
+
+# Chaves e segredos (nunca suba)
+.env
+.env.*
+*.jks
+*.keystore
+*.p8
+*.p12
+*.key
+*.mobileprovision
+google-services.json
+GoogleService-Info.plist
+
+# Logs e temporários
+npm-debug.*
+yarn-debug.*
+yarn-error.*
 *.log
+*.tsbuildinfo
+
+# Sistema e editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json

@@ -1,5 +1,4 @@
-import { useRef,} from 'react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Alert, Text, View } from 'react-native';
 import * as DocumentPicker from 'expo-document-picker';
 import * as FileSystem from 'expo-file-system/legacy';
@@ -31,10 +30,10 @@ export default function ImportarObra({ onImportada }: { onImportada: () => void 
   const [salvando, setSalvando] = useState(false);
   const salvandoRef = useRef(false);
 
-const fechar = () => {
-  if (salvandoRef.current) return;
-  setRascunho(null);
-};
+  const fechar = () => {
+    if (salvandoRef.current) return;
+    setRascunho(null);
+  };
 
   async function escolher() {
     try {
@@ -60,45 +59,46 @@ const fechar = () => {
     }
   }
 
- async function salvar() {
-  if (!rascunho || salvandoRef.current) return;
-  if (!titulo.trim()) return Alert.alert('Informe o título da obra.');
-  if (!categoria) return Alert.alert('Escolha uma categoria.');
-  salvandoRef.current = true;
-  setSalvando(true);
-  try {
-    await garantirDiretorioObras();
-    const seguro = rascunho.nomeOriginal.replace(/[^a-zA-Z0-9._-]/g, '_');
-    const arquivo = `${Date.now()}_${seguro}`;
-    const destino = DIR_OBRAS + arquivo;
+  async function salvar() {
+    if (!rascunho || salvandoRef.current) return;
+    if (!titulo.trim()) return Alert.alert('Informe o título da obra.');
+    if (!categoria) return Alert.alert('Escolha uma categoria.');
+    salvandoRef.current = true;
+    setSalvando(true);
     try {
-      await FileSystem.copyAsync({ from: rascunho.uri, to: destino });
-    } catch {
-      // plano B: lê em base64 e grava (funciona com content://)
-      const b64 = await FileSystem.readAsStringAsync(rascunho.uri, {
-        encoding: FileSystem.EncodingType.Base64,
+      await garantirDiretorioObras();
+      const seguro = rascunho.nomeOriginal.replace(/[^a-zA-Z0-9._-]/g, '_');
+      const arquivo = `${Date.now()}_${seguro}`;
+      const destino = DIR_OBRAS + arquivo;
+      try {
+        await FileSystem.copyAsync({ from: rascunho.uri, to: destino });
+      } catch {
+        // plano B: lê em base64 e grava (funciona com content://)
+        const b64 = await FileSystem.readAsStringAsync(rascunho.uri, {
+          encoding: FileSystem.EncodingType.Base64,
+        });
+        await FileSystem.writeAsStringAsync(destino, b64, {
+          encoding: FileSystem.EncodingType.Base64,
+        });
+      }
+      await inserirObra(db, {
+        titulo: titulo.trim(),
+        autor: autor.trim(),
+        categoria,
+        tags: tags.trim(),
+        arquivo,
+        tipo: rascunho.tipo,
       });
-      await FileSystem.writeAsStringAsync(destino, b64, {
-        encoding: FileSystem.EncodingType.Base64,
-      });
+      setRascunho(null);
+      onImportada();
+    } catch (e) {
+      Alert.alert('Erro ao importar', String(e));
+    } finally {
+      salvandoRef.current = false;
+      setSalvando(false);
     }
-    await inserirObra(db, {
-      titulo: titulo.trim(),
-      autor: autor.trim(),
-      categoria,
-      tags: tags.trim(),
-      arquivo,
-      tipo: rascunho.tipo,
-    });
-    setRascunho(null);
-    onImportada();
-  } catch (e) {
-    Alert.alert('Erro ao importar', String(e));
-  } finally {
-    salvandoRef.current = false;
-    setSalvando(false);
   }
-}
+
   return (
     <>
       <Botao titulo="+ Importar Obra (PDF / Markdown)" onPress={escolher} />

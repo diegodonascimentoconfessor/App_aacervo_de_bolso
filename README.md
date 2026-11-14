@@ -58,3 +58,10 @@ constants/             theme (cores) e categorias fixas
   Ambos gravam com debounce e de novo ao sair do leitor.
 - Novas migrações: incremente `DB_VERSION` em `database/db.ts` e adicione
   `if (atual < 2) { ... }` em `initDb`.
+
+## Novidades
+- Animação de abertura (`components/AnimatedSplash.tsx`) e splash nativo escuro.
+- Carrossel "Em pauta" na tela Início com notícias de filosofia, cultura e geopolítica
+  (RSS, cache offline). Fontes em `constants/noticias.ts`.
+- Importação de obras copia direto do arquivo original (sem cache do seletor).
+- No Expo Go o leitor de PDF mostra um aviso; use development build para ler PDF.

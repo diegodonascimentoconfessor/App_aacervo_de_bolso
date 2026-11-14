@@ -1,6 +1,6 @@
-import Constants, { ExecutionEnvironment } from 'expo-constants';
 import { useEffect, useRef, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Constants, { ExecutionEnvironment } from 'expo-constants';
 import { useSQLiteContext } from 'expo-sqlite';
 import { colors } from '@/constants/theme';
 import { caminhoObra, Obra, salvarProgressoPdf } from '@/database/db';

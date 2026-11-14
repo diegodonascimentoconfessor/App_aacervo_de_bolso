@@ -9,31 +9,30 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@config-plugins/react-native-blob-util": "^14.0.2",
-    "@config-plugins/react-native-pdf": "^14.0.2",
-    "@expo/vector-icons": "*",
     "expo": "~58.0.0",
-    "expo-constants": "*",
-    "expo-dev-client": "*",
-    "expo-document-picker": "*",
-    "expo-file-system": "*",
-    "expo-linking": "*",
     "expo-router": "*",
     "expo-sqlite": "*",
-    "expo-status-bar": "*",
+    "expo-document-picker": "*",
+    "expo-file-system": "*",
     "expo-web-browser": "*",
-    "punycode": "^2.3.1",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0",
+    "expo-status-bar": "*",
+    "expo-linking": "*",
+    "expo-constants": "*",
+    "expo-dev-client": "*",
+    "react": "19.3.0",
     "react-native": "*",
-    "react-native-blob-util": "^1.1.1",
-    "react-native-markdown-display": "^7.0.2",
-    "react-native-pdf": "^7.0.5",
+    "react-native-screens": "*",
     "react-native-safe-area-context": "*",
-    "react-native-screens": "*"
+    "react-native-pdf": "*",
+    "react-native-blob-util": "*",
+    "react-native-markdown-display": "^7.0.2",
+    "@expo/vector-icons": "*",
+    "expo-splash-screen": "*",
+    "punycode": "*",
+    "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "@types/react": "*",
-    "typescript": "~6.0.3"
+    "typescript": "~6.0.3",
+    "@types/react": "*"
   }
 }

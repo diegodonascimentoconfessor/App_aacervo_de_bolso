@@ -17,9 +17,22 @@
     "plugins": [
       "expo-router",
       "expo-sqlite",
-      "react-native-blob-util",
-      "@config-plugins/react-native-pdf",
-      "@config-plugins/react-native-blob-util"
-    ]
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0D0D0D"
+        }
+      ]
+    ],
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "b1786d47-afa4-40b0-8571-07e8ca460728"
+      }
+    }
   }
 }

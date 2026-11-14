@@ -1,7 +1,11 @@
 import { useEffect, useRef } from 'react';
-import { Animated, Easing, StyleSheet, View } from 'react-native';
+import { Animated, Easing, StyleSheet, Text, View } from 'react-native';
 import { colors, fonts } from '@/constants/theme';
 
+/**
+ * Animação de abertura: linha âmbar se expande, "Acervo" e "de Bolso"
+ * surgem em sequência, o conjunto segura um instante e some em fade.
+ */
 export default function AnimatedSplash({ onFim }: { onFim: () => void }) {
   const linha = useRef(new Animated.Value(0)).current;
   const t1 = useRef(new Animated.Value(0)).current;
@@ -30,6 +34,7 @@ export default function AnimatedSplash({ onFim }: { onFim: () => void }) {
     ]).start(({ finished }) => {
       if (finished) onFim();
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const sobe = (v: Animated.Value) => ({

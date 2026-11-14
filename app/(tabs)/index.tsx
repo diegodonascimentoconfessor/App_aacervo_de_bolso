@@ -3,6 +3,7 @@ import { ScrollView, Text, TextInput, View } from 'react-native';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
 import * as WebBrowser from 'expo-web-browser';
+import NoticiasCarrossel from '@/components/NoticiasCarrossel';
 import { Botao, Card, inputStyle, Pill, Progress, SectionTitle, Vazio } from '@/components/ui';
 import { colors, space } from '@/constants/theme';
 import { Artigo, artigoAleatorio, buscar, Obra, Resultado, ultimaObraAberta } from '@/database/db';
@@ -93,6 +94,7 @@ export default function Inicio() {
         )
       ) : (
         <>
+          <NoticiasCarrossel />
           <SectionTitle>Continuar lendo</SectionTitle>
           {ultima ? (
             <Card onPress={() => abrirObra(ultima.id)} style={{ gap: 10 }}>
