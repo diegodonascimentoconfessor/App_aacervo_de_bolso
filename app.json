@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Acervo de Bolso",
+    "slug": "acervo-de-bolso",
+    "scheme": "acervo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0D0D0D",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.diego.acervodebolso"
+    },
+    "android": {
+      "package": "com.diego.acervodebolso"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "react-native-blob-util",
+      "@config-plugins/react-native-pdf",
+      "@config-plugins/react-native-blob-util"
+    ]
+  }
+}
