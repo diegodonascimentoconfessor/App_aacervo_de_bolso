@@ -1,0 +1,89 @@
+{
+  "_instrucoes": "Edite este arquivo no GitHub e aumente versaoCatalogo a cada mudança. O app baixa sozinho ao abrir. Campos com _ são ignorados. Links e vídeos precisam de https. Se um app for antigo demais (versaoMinimaApp), ele ignora este arquivo e mantém o cache.",
+  "versaoCatalogo": 1,
+  "versaoMinimaApp": "1.0.0",
+
+  "radios": [
+    { "id": "mec", "nomeCurto": "MEC", "nomeCompleto": "Rádio MEC", "categoria": "Cultura brasileira: MPB, choro e música instrumental", "streamUrl": "https://radiomec-stream.ebc.com.br/ebc/radiomec/playlist.m3u8" },
+    { "id": "senado", "nomeCurto": "Senado", "nomeCompleto": "Rádio Senado", "categoria": "Notícias, cidadania e música brasileira", "streamUrl": "https://radioaovivo.senado.leg.br/fm.mp3" },
+    { "id": "foco", "nomeCurto": "Foco", "nomeCompleto": "Chill Beats · Groove Salad", "categoria": "Batidas calmas e downtempo para concentração (SomaFM)", "streamUrl": "https://ice1.somafm.com/groovesalad-128-mp3" },
+    { "id": "jazz", "nomeCurto": "Jazz", "nomeCompleto": "Jazz Instrumental · Radio Swiss Jazz", "categoria": "Jazz e piano instrumental para leitura", "streamUrl": "https://stream.srg-ssr.ch/m/rsj/mp3_128" },
+    { "id": "usp", "nomeCurto": "USP", "nomeCompleto": "Rádio USP 93.7", "categoria": "Cultura, ciência e educação da Universidade de São Paulo", "streamUrl": "https://flow.emm.usp.br:8008/radiousp-128.mp3" },
+    { "id": "camara", "nomeCurto": "Câmara", "nomeCompleto": "Rádio Câmara", "categoria": "Debates, sessões do Plenário e informação pública", "streamUrl": "https://stream3.camara.leg.br/radiocamara1t64" },
+    { "id": "classica", "nomeCurto": "Clássica", "nomeCompleto": "Clássica · Radio Swiss Classic", "categoria": "Música clássica e barroca instrumental", "streamUrl": "https://stream.srg-ssr.ch/m/rsc_de/mp3_128" },
+    { "id": "ambiente", "nomeCurto": "Ambiente", "nomeCompleto": "Ambiente · Drone Zone", "categoria": "Atmosferas contínuas e sons ambiente para leitura (SomaFM)", "streamUrl": "https://ice1.somafm.com/dronezone-128-mp3" }
+  ],
+
+  "pilulasDoDia": [
+    {
+      "id": "p-estoicismo-controle",
+      "categoria": "Filosofia Grega & Clássica",
+      "titulo": "O que depende de nós",
+      "autor": "Epicteto, Enchirídio",
+      "resumo": "Para Epicteto, algumas coisas dependem de nós (juízos, desejos, ações) e outras não (corpo, reputação, riqueza). A paz começa em separar as duas.",
+      "reflexao": "Antes de se angustiar com algo hoje, pergunte: isso está sob meu controle? Se não está, o esforço certo é mudar o juízo sobre o fato, e não o fato."
+    },
+    {
+      "id": "p-socrates-vida-examinada",
+      "categoria": "Filosofia Grega & Clássica",
+      "titulo": "A vida não examinada",
+      "autor": "Platão, Apologia de Sócrates",
+      "resumo": "Diante dos juízes, Sócrates sustenta que uma vida sem exame crítico não vale a pena ser vivida: questionar crenças é o trabalho central do ser humano.",
+      "reflexao": "Escolha uma crença que você nunca questionou e tente defender o contrário por cinco minutos. O que muda?"
+    },
+    {
+      "id": "p-rousseau-contrato",
+      "categoria": "Filosofia Moderna & Pós-Moderna",
+      "titulo": "O contrato social",
+      "autor": "Jean-Jacques Rousseau",
+      "resumo": "A legitimidade política nasce de um pacto entre iguais, guiado pela vontade geral e não pela força. Obedecer à lei que demos a nós mesmos seria a verdadeira liberdade.",
+      "reflexao": "Quando uma regra parece imposta, vale perguntar quem a escreveu e se quem a segue teve voz na sua criação."
+    },
+    {
+      "id": "p-tucidides-armadilha",
+      "categoria": "Geopolítica",
+      "titulo": "A armadilha de Tucídides",
+      "autor": "Tucídides; Graham Allison",
+      "resumo": "Tucídides atribuiu a Guerra do Peloponeso ao medo de Esparta diante do crescimento de Atenas. O termo hoje descreve o risco de conflito quando uma potência emergente ameaça a dominante.",
+      "reflexao": "Observe uma notícia atual de rivalidade entre potências e pergunte: quem é a potência ascendente e quem teme perder posição?"
+    },
+    {
+      "id": "p-nye-poder-brando",
+      "categoria": "Geopolítica",
+      "titulo": "Poder brando",
+      "autor": "Joseph Nye",
+      "resumo": "Poder brando é a capacidade de obter o que se quer por atração (cultura, valores, política externa legítima) em vez de coerção ou pagamento.",
+      "reflexao": "Pense em um país que admira. O que nele atrai você: o que ele faz ou o que ele é?"
+    },
+    {
+      "id": "p-herz-dilema-seguranca",
+      "categoria": "Geopolítica",
+      "titulo": "O dilema de segurança",
+      "autor": "John Herz",
+      "resumo": "Ao reforçar a própria defesa, um Estado reduz a segurança percebida pelos vizinhos, que reagem se armando também. O resultado pode ser menos segurança para todos.",
+      "reflexao": "Em disputas do dia a dia, uma precaução sua pode ser lida pelo outro como ameaça? Como comunicar intenções?"
+    }
+  ],
+
+  "videos": [
+    { "id": "v1", "titulo": "O Mito da Caverna e a natureza da realidade (Crash Course Philosophy #4)", "canal": "CrashCourse", "categoria": "Filosofia", "duracao": "9 min", "youtubeId": "IV-8YsyghbU" },
+    { "id": "v2", "titulo": "The Agricultural Revolution (Crash Course World History #1)", "canal": "CrashCourse", "categoria": "História", "duracao": "11 min", "youtubeId": "Yocja_N5s1I" },
+    { "id": "v3", "titulo": "USA vs USSR Fight! The Cold War (Crash Course World History #39)", "canal": "CrashCourse", "categoria": "Geopolítica", "duracao": "12 min", "youtubeId": "y9HjvHZfCUI" },
+    { "id": "v4", "titulo": "Early Computing (Crash Course Computer Science #1)", "canal": "CrashCourse", "categoria": "Tecnologia", "duracao": "12 min", "youtubeId": "O5nskjZ_GoI" }
+  ],
+
+  "podcasts": [],
+
+  "feedsYoutube": [],
+
+  "feedsPodcast": [
+    { "url": "https://podcasts.files.bbci.co.uk/b006qykl.rss", "programa": "In Our Time (BBC Radio 4)", "categoria": "História e Filosofia" }
+  ],
+
+  "linksPublicos": [
+    { "id": "l-perseus", "categoria": "Filosofia Grega & Clássica", "titulo": "Perseus Digital Library", "descricao": "Textos gregos e latinos clássicos, com traduções e ferramentas de consulta.", "url": "https://www.perseus.tufts.edu" },
+    { "id": "l-iep", "categoria": "Filosofia Moderna & Pós-Moderna", "titulo": "Internet Encyclopedia of Philosophy", "descricao": "Enciclopédia acadêmica de filosofia, de acesso aberto.", "url": "https://iep.utm.edu" },
+    { "id": "l-bndigital", "categoria": "História", "titulo": "BNDigital (Biblioteca Nacional)", "descricao": "Acervo digital da Biblioteca Nacional do Brasil: obras raras, periódicos e documentos.", "url": "https://bndigital.bn.gov.br" },
+    { "id": "l-wilson", "categoria": "Geopolítica", "titulo": "Wilson Center Digital Archive", "descricao": "Documentos históricos da Guerra Fria e das relações internacionais.", "url": "https://digitalarchive.wilsoncenter.org" }
+  ]
+}

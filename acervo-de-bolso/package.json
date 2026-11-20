@@ -1,0 +1,41 @@
+{
+  "name": "acervo-de-bolso",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "expo": "~58.0.0",
+    "expo-router": "*",
+    "expo-sqlite": "*",
+    "expo-document-picker": "*",
+    "expo-file-system": "*",
+    "expo-web-browser": "*",
+    "expo-status-bar": "*",
+    "expo-linking": "*",
+    "expo-constants": "*",
+    "expo-dev-client": "*",
+    "react": "19.3.0",
+    "react-native": "*",
+    "react-native-screens": "*",
+    "react-native-safe-area-context": "*",
+    "react-native-pdf": "*",
+    "react-native-blob-util": "*",
+    "react-native-markdown-display": "^7.0.2",
+    "@expo/vector-icons": "*",
+    "expo-splash-screen": "*",
+    "punycode": "*",
+    "react-dom": "19.3.0",
+    "expo-audio": "*",
+    "expo-build-properties": "*",
+    "expo-updates": "*"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.3",
+    "@types/react": "*"
+  }
+}

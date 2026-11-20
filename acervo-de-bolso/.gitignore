@@ -1,0 +1,53 @@
+# Dependências
+node_modules/
+
+# Expo / Metro
+.expo/
+.expo-shared/
+dist/
+web-build/
+expo-env.d.ts
+.metro-health-check*
+
+# Pastas nativas geradas (o `expo prebuild` / `run:android` / EAS Build recriam)
+/android
+/ios
+
+# Builds e binários
+*.apk
+*.aab
+*.ipa
+*.app
+*.hprof
+
+# Chaves e segredos (nunca suba)
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.p8
+*.p12
+*.pem
+*.key
+*.mobileprovision
+google-services.json
+GoogleService-Info.plist
+local.properties
+credentials.json
+
+# Logs e temporários
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+*.tsbuildinfo
+*.tgz
+coverage/
+
+# Sistema e editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
